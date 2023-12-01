@@ -27,8 +27,4 @@ const proteinCal = proteinCalStore();
   </div>
 </template>
 
-<style lang="scss" scoped>
-.config {
-  width: 40%;
-}
-</style>
+<style lang="scss" scoped></style>

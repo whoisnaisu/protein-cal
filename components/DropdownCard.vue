@@ -15,9 +15,4 @@ const proteinCal = proteinCalStore();
   </div>
 </template>
 
-<style lang="scss" scoped>
-.combo-config {
-  margin-top: 10rem;
-  width: 40%;
-}
-</style>
+<style lang="scss" scoped></style>
