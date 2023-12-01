@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "protein-cal",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,8 +11,6 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",
     "typescript": "^5.3.2",
@@ -23,6 +21,11 @@
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
+    "@pinia/nuxt": "^0.5.1",
+    "pinia": "^2.1.7",
     "scss": "^0.2.4"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

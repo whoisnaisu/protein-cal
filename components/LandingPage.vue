@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <DropdownCard />
+    <WeightInput />
     <FooterButton />
   </div>
 </template>

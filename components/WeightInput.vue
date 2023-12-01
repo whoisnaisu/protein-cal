@@ -1,5 +1,34 @@
+<script setup>
+const proteinCal = proteinCalStore();
+// counter.count++
+// counter.$patch({ count: counter.count + 1 })
+// counter.increment()
+</script>
+
 <template>
-  <div>
-    <v-text-field clearable label="Label" variant="outlined"></v-text-field>
+  <div class="config">
+    <v-text-field
+      clearable
+      label="ใส่น้ำหนักของคุณ (กิโลกรัม)"
+      variant="outlined"
+      type="number"
+      v-model="proteinCal.userWeight"
+    ></v-text-field>
+    <div>
+      โปรตีนที่คุณต้องรับประทานต่อวันคือ
+      {{
+        proteinCal.calculateTheProteinGrams(
+          proteinCal.userType,
+          proteinCal.userWeight
+        )
+      }}
+      กรัม
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.config {
+  width: 40%;
+}
+</style>
