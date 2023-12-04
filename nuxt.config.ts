@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   css: ["@/assets/scss/global.scss"],
   modules: [
-    '@pinia/nuxt',
+    "@pinia/nuxt",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     },
   ],
   pinia: {
-    storesDirs: ['./stores/**'],
+    storesDirs: ["./stores/**"],
   },
   vite: {
     css: {
@@ -37,5 +37,8 @@ export default defineNuxtConfig({
       },
     },
   },
-  
+  app: {
+    baseURL: "/protein-cal/",
+    buildAssetsDir: "assets",
+  },
 });
