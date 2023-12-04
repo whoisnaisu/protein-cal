@@ -14,17 +14,5 @@ const proteinCal = proteinCalStore();
       type="number"
       v-model="proteinCal.userWeight"
     ></v-text-field>
-    <div>
-      โปรตีนที่คุณต้องรับประทานต่อวันคือ
-      {{
-        proteinCal.calculateTheProteinGrams(
-          proteinCal.userType,
-          proteinCal.userWeight
-        )
-      }}
-      กรัม
-    </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

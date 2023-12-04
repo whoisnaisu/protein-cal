@@ -24,8 +24,5 @@
     "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.1.7",
     "scss": "^0.2.4"
-  },
-  "overrides": {
-    "vue": "latest"
   }
 }

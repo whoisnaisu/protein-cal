@@ -1,16 +1,9 @@
 <template>
   <div class="container">
+    <MainBanner />
     <DropdownCard />
     <WeightInput />
     <FooterButton />
+    <ResultCard />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-</style>

@@ -4,7 +4,7 @@ const proteinCal = proteinCalStore();
 </script>
 
 <template>
-  <div class="combo-config">
+  <div class="config">
     <v-combobox
       clearable
       label="คุณคือ..."
@@ -14,5 +14,3 @@ const proteinCal = proteinCalStore();
     ></v-combobox>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

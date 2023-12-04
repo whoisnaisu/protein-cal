@@ -1,4 +1,5 @@
 export interface IUserData {
   type: string;
-  gram: number;
+  minGram: number;
+  maxGram: number;
 }
