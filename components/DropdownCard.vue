@@ -6,11 +6,11 @@ const proteinCal = proteinCalStore();
 <template>
   <div class="config">
     <v-combobox
+      v-model="proteinCal.userType"
       clearable
       label="คุณคือ..."
       :items="userChoices"
-      v-model="proteinCal.userType"
       variant="outlined"
-    ></v-combobox>
+    />
   </div>
 </template>

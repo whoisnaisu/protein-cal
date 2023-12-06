@@ -1,19 +1,21 @@
-import { defineStore, acceptHMRUpdate } from "pinia";
-import userData from "@/data/user-data";
+import { defineStore } from "pinia"
+import userData from "@/data/user-data"
 
 export const proteinCalStore = defineStore("proteinCal", () => {
-  let userType = ref("");
-  let userWeight = ref(0);
-  let proteinGram = ref("");
+  const userType: Ref<string> = ref("")
+  const userWeight: Ref<number> = ref(0)
+  const proteinGram: Ref<string> = ref("")
 
   function updateUserWeight(val: number) {
-    userWeight.value = val;
+    userWeight.value = val
   }
 
   function calculateProteinGrams(userType: string, userWeight: number) {
-    for (let item of userData) {
+    for (const item of userData) {
       if (userType === item.type) {
-        return `${item.minGram * userWeight} - ${item.maxGram * userWeight}`;
+        return `${(item.minGram * userWeight).toFixed(2)} - ${(
+          item.maxGram * userWeight
+        ).toFixed(2)}`
       }
     }
   }
@@ -24,5 +26,5 @@ export const proteinCalStore = defineStore("proteinCal", () => {
     userWeight,
     calculateProteinGrams,
     proteinGram,
-  };
-});
+  }
+})

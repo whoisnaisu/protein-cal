@@ -8,11 +8,11 @@ const proteinCal = proteinCalStore();
 <template>
   <div class="config">
     <v-text-field
+      v-model="proteinCal.userWeight"
       clearable
       label="ใส่น้ำหนักของคุณ (กิโลกรัม)"
       variant="outlined"
       type="number"
-      v-model="proteinCal.userWeight"
-    ></v-text-field>
+    />
   </div>
 </template>

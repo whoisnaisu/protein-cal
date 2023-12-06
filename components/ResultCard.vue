@@ -1,15 +1,9 @@
 <script setup>
-import { ref, watch } from "vue";
 const proteinCal = proteinCalStore();
-const userWeight = ref(proteinCal.userWeight);
-
-watch(userWeight, (newVal) => {
-  console.log(newVal);
-});
 </script>
 
 <template>
-  <div>
+  <div v-if="proteinCal.userWeight !== 0">
     จำนวนโปรตีนที่ควรได้รับคือ
     {{
       proteinCal.calculateProteinGrams(

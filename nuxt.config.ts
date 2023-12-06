@@ -1,4 +1,4 @@
-import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify"
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
@@ -11,8 +11,8 @@ export default defineNuxtConfig({
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }));
-      });
+        config.plugins.push(vuetify({ autoImport: true }))
+      })
     },
   ],
   pinia: {
@@ -41,4 +41,4 @@ export default defineNuxtConfig({
     baseURL: "/protein-cal/",
     buildAssetsDir: "assets",
   },
-});
+})

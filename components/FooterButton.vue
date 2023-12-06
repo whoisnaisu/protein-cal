@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import data from "@/data/footer-data";
-function openLink(path: string) {
-  window.open(path, "_blank");
+
+function openLink(path: Array<string> | string) {
+  if (typeof path === "string") {
+    window.open(path, "_blank");
+  } else if (Array.isArray(path)) {
+    for (const link of path) {
+      window.open(link, "_blank");
+    }
+  }
 }
 </script>
 
